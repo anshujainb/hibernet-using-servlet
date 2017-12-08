@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 14 Sep, 2017 1:12:27 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.pojo.Pancard" table="pancard" catalog="userid">
+        <id name="pid" type="java.lang.Integer">
+            <column name="pId" />
+            <generator class="identity" />
+        </id>
+        <property name="pnum" type="string">
+            <column name="pNum" length="45" not-null="true" />
+        </property>
+        <one-to-one name="user" class="com.pojo.User"></one-to-one>
+    </class>
+</hibernate-mapping>
